@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import AppEx2 from "./Ex2/AppEx2.jsx";
+import AppEx4 from "./Ex4/AppEx4.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppEx2 />
+    <AppEx4 />
   </React.StrictMode>
 );
