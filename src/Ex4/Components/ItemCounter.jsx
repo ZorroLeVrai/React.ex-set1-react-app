@@ -10,7 +10,7 @@ export default function ItemCounter(props) {
 
   return (
     <div class="card">
-      <DivRightAlign class="card-body">
+      <DivRightAlign className="card-body">
         <BsCart4 size={30} /> {nbItems}
       </DivRightAlign>
     </div>

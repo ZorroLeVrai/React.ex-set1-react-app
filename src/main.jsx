@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import AppEx4 from "./Ex4/AppEx4.jsx";
+import { BrowserRouter } from "react-router-dom";
+import App from "./app.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppEx4 />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
