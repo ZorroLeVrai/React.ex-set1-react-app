@@ -23,7 +23,7 @@ Create a `Like` component that will be displayed as a heart icon.
 
 Create a shopping cart application.
 
-In this application we will have 2 main elements.
+In your application we will have 2 main elements.
 
 1. ItemCounter. That will count the number of items we have in our cart.
 2. Cart. That will contain the items. This component will be empty by default and will have 2 available buttons (‘Add’, ‘Remove’).
@@ -31,3 +31,37 @@ In this application we will have 2 main elements.
 When clicking the ‘Add’ button an item is added to the cart.  
 When clicking the ‘Remove’ button an item is removed from the cart.  
 To make things simpler the items created will have the following names item1, item2, ...
+
+## Exercise 5
+
+In your application you are going to display a city list to the user.  
+Everytime a city is selected, it is highlighted in blue and its name appears in a badge element below.
+
+The application will consist of 4 React components with the following component hierarchy
+
+- App.
+  - ListGroup.
+    - ListGroupItem.
+  - SelectedCity.
+
+**App**: The main app component that will display the ListGroup and the SelectedCity components.
+
+**ListGroup**: Displays an unordered list of city names.
+It takes 3 attributes as parameter  
+	- items: containing the city list.  
+	- heading: A heading that will be displayed at the top of the component.  
+	- Another attribute to signal the selected item to the parent component.  
+The `<ul/>` element should have the `list-group` class.
+
+**ListGroupItem**: A simple list item (`<li/>`)  
+It takes 3 parameters  
+	- text: the text for the component.  
+	- highlighted: a boolean that tells us if the component is active or not.  
+	- onClickHandler: to signal that the item has been clicked.  
+The `<li/>` element should have the `list-group-item` class and the `active` class if it is active.  
+SelectedCity: A badge element that displays the name of the selected city.  
+It takes only 1 parameter.  
+	- City: the city name to display.  
+`<div className="badge bg-primary fs-5">"My city name"</div>`
+
+To get the proper styles displayed, install `bootstrap` in your application.
