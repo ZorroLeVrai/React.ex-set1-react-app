@@ -1,67 +1,106 @@
-# Solution for a set of exercices
+# Solution pour les exercices
 
-## Exercise 1
+## Exercice 1
 
-- Create a Bootstrap button component with React.
-- You can find the Button documentation for Bootstrap [here](https://getbootstrap.com/docs/5.3/components/buttons/)
+- Créez un composant bouton à l’aide de Bootstrap et React.
+- Vous pouvez trouver la documentation Bootstrap ci-dessous [here](https://getbootstrap.com/docs/5.3/components/buttons/)
+Nous voulons créer un composant React qui agira comme un wrapper autour d'un simple bouton Bootstrap.
 
-## Exercise 2
+## Exercice 2
 
-- Use the previous Button component. When this component is clicked, you will display a dismissible Alert.
-- Create a dismissible alert component using the Bootstrap documentation.
-  The documentation for Bootstrap dismissible alert can be found [here](https://getbootstrap.com/docs/5.3/components/alerts/#dismissing)
+Utilisez le composant Bouton précédent.
+Lorsque ce composant est cliqué, affichez une alerte désactivable.
 
-## Exercise 3
+- Créez une alerte désactivable en utilisant la documentation Bootstrap.  
+  La documentation pour créer un bouton désactivable est accessible à partir de ce lien [here](https://getbootstrap.com/docs/5.3/components/alerts/#dismissing)
 
-Create a `Like` component that will be displayed as a heart icon.
+## Exercice 3
 
-- In this exercise you are going to use the `react-icons` library to display a filled heart icon if the component is liked or an outlined heart icon if it is not liked.
-- The user can like or dislike by clicking on the component. The component will toggle from a filled heart to an empty heart and vice-versa.
-- The parent component has to be notified in case of like or dislike of the component
+Créez un composant `Like` qui est affiché à l’aide d’un coeur.
 
-## Exercise 4
+- Dans cet exercice, vous allez utiliser la bibliothèque `react-icons` pour afficher une icône de coeur remplie si le composant est aimé ou une icône de coeur vide s'il n'est pas aimé.
+- L'utilisateur peut aimer ou ne pas aimer en cliquant sur le composant. Le composant passera d'un cœur rempli à un cœur vide et vice-versa.
+- Le composant parent doit être notifié en cas de like ou de dislike du composant
 
-Create a shopping cart application.
+## Exercice 4
 
-In your application we will have 2 main elements.
+Creez une application e-commerce..
 
-1. ItemCounter. That will count the number of items we have in our cart.
-2. Cart. That will contain the items. This component will be empty by default and will have 2 available buttons (‘Add’, ‘Remove’).
+Dans cette application il y aura 2 principaux composants
 
-When clicking the ‘Add’ button an item is added to the cart.  
-When clicking the ‘Remove’ button an item is removed from the cart.  
-To make things simpler the items created will have the following names item1, item2, ...
+1. ItemCounter. Ce composant comptera le nombre d'articles que nous avons dans notre panier.
+2. Cart. Ce composant contiendra les articles. Ce composant sera vide par défaut et disposera de deux boutons ("Ajouter", "Retirer").
+En cliquant sur le bouton "Ajouter", un article est ajouté au panier.
+En cliquant sur le bouton "Retirer", un article est retiré du panier.
+Pour des raisons de simplicité, les articles créés dans le panier porteront un nom par défaut tel que item1, item2, …
 
-## Exercise 5
+## Exercice 5
 
-In your application you are going to display a city list to the user.  
-Everytime a city is selected, it is highlighted in blue and its name appears in a badge element below.
+Dans cette application, vous allez afficher une liste de villes à l'utilisateur.  
+Chaque fois qu'une ville est sélectionnée, elle est surlignée en bleu et son nom apparaît dans un élément de badge situé en dessous.  
 
-The application will consist of 4 React components with the following component hierarchy
-
+Cette application sera composée de 4 composants React avec la hiérarchie de composants suivante
 - App.
   - ListGroup.
     - ListGroupItem.
   - SelectedCity.
 
-**App**: The main app component that will display the ListGroup and the SelectedCity components.
+**App**: Le composant principal qui contient les composants ListGroup et SelectedCity.
 
-**ListGroup**: Displays an unordered list of city names.
-It takes 3 attributes as parameter  
-	- items: containing the city list.  
-	- heading: A heading that will be displayed at the top of the component.  
-	- Another attribute to signal the selected item to the parent component.  
-The `<ul/>` element should have the `list-group` class.
+**ListGroup**: Affiche une liste non ordonnée de noms de villes.
+Prend 3 paramètres  
+	- items: contenant la liste des villes.  
+	- heading: un en-tête qui sera affiché en haut du composant.  
+	- Un autre attribut pour signaler l'élément sélectionné au composant parent.  
+L'élément <ul/> doit avoir la classe `list-group`.
 
-**ListGroupItem**: A simple list item (`<li/>`)  
-It takes 3 parameters  
-	- text: the text for the component.  
-	- highlighted: a boolean that tells us if the component is active or not.  
-	- onClickHandler: to signal that the item has been clicked.  
-The `<li/>` element should have the `list-group-item` class and the `active` class if it is active.  
-SelectedCity: A badge element that displays the name of the selected city.  
-It takes only 1 parameter.  
-	- City: the city name to display.  
+**ListGroupItem**: Un élément de liste (`<li/>`)  
+Prend 3 paramètres  
+	- text: le texte du composant.  
+	- highlighted: un booléen pour signaler si le composant est actif ou pas.  
+	- onClickHandler: pour signaler qu’un élément a été sélectionné.  
+L’élément </li> doit avoir la classe `list-group-item` et la classe `active` si l’élément est actif.  
+SelectedCity: Un badge qui affiche le nom de la ville sélectionnée.  
+Cet élément prend un seul paramètre.  
+	- City: le nom de la ville à afficher.  
 `<div className="badge bg-primary fs-5">"My city name"</div>`
 
-To get the proper styles displayed, install `bootstrap` in your application.
+Pour afficher les styles des composants correctement, installez `bootstrap`.
+
+## Exercice 6
+
+Dans cet exercices vous allez utiliser le hook `useEffect` pour récupérer des données d'une API.  
+L'API que vous allez utiliser renvoie des commentaires. Lors du chargement de cette application, vous allez afficher le commentaire dont l'id 1.  
+Affichez 2 boutons `Précédent` et `Suivant` pour pouvoir afficher les commentaires précédents et suivants de l'API.  
+Dans l'application affichez uniquement les champs `id` et `name` des commentaires.  
+Voici l'adresse de l'API à utiliser (le dernier nombre correspond à l’id)  
+[https://jsonplaceholder.typicode.com/comments/1](https://jsonplaceholder.typicode.com/comments/1)
+
+## Exercice 7
+
+Affichez un formulaire composé de 2 champs
+- Un nom (ce champ est requis et doit être composé d'au moins 2 caractères).
+- Un numéro de téléphone (ce champs doit être composé de 10 chiffres).
+
+Un bouton d'envoi permet d'afficher dans un autre champ les données remplies dans le formulaire.
+
+## Exercice 8
+
+### Utilisation de Redux  
+
+Dans cet exercice, vous affichez un compteur qui est initiliasé à 0.  
+En dessous de ce compteur il y aura 3 boutons
+- Initialiser. Qui remet le compteur à 0.
+- Incrémenter. Qui incrémente le compteur.
+- Décrémenter. Qui décrémente le compteur.
+
+Vous utiliserez Redux pour gérer l'état de ce composant.
+
+## Exercice 9
+
+Dans cet exercices vous allez utiliser un middleware Redux pour récupérer des données d'une API.  
+Reprenez exactement le même énoncé que pour l'exercice 6, mais cette fois-ci utilisez un middleware Redux pour envoyer la requête à l'API.
+
+Dans l'application affichez uniquement les champs `id` et `name` des commentaires.  
+Voici l'adresse de l'API à utiliser (le dernier nombre correspond à l’id)  
+[https://jsonplaceholder.typicode.com/comments/1](https://jsonplaceholder.typicode.com/comments/1)
