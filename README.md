@@ -80,7 +80,7 @@ Voici l'adresse de l'API à utiliser (le dernier nombre correspond à l’id)
 
 Affichez un formulaire composé de 2 champs
 - Un nom (ce champ est requis et doit être composé d'au moins 2 caractères).
-- Un numéro de téléphone (ce champs doit être composé de 10 chiffres).
+- Un numéro de téléphone (ce champ est requis et doit être composé de 10 chiffres. Les chiffres peuvent être séparés par des espaces).
 
 Un bouton d'envoi permet d'afficher dans un autre champ les données remplies dans le formulaire.
 
