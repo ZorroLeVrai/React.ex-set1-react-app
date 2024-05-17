@@ -1,0 +1,15 @@
+import { configureStore } from '@reduxjs/toolkit';
+import commentReducer from './commentSlice';
+import api from './middlewares/api';
+
+const baseURL = "https://jsonplaceholder.typicode.com/";
+
+export const store = configureStore({
+  reducer: {
+    comment: commentReducer
+  },
+  middleware: (getDefaultMiddleware) => [
+    ...getDefaultMiddleware(),
+    api(baseURL)
+  ]
+});
