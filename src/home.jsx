@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const nbExercises = 9;
+  const nbExercises = 10;
   const exerciseList = [...Array(nbExercises).keys()].map((i) => i + 1);
 
   return (

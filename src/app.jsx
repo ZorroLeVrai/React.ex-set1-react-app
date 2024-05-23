@@ -10,6 +10,7 @@ import AppEx6 from "./Ex6/AppEx6";
 import AppEx7 from "./Ex7/AppEx7";
 import AppEx8 from "./Ex8/AppEx8";
 import AppEx9 from "./Ex9/AppEx9";
+import AppEx10 from "./Ex10/AppEx10";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/Ex7" element={<AppEx7 />} />
         <Route path="/Ex8" element={<AppEx8 />} />
         <Route path="/Ex9" element={<AppEx9 />} />
+        <Route path="/Ex10" element={<AppEx10 />} />
       </Route>
     </Routes>
   );
