@@ -69,7 +69,7 @@ Pour afficher les styles des composants correctement, installez `bootstrap`.
 
 ## Exercice 6
 
-Dans cet exercices vous allez utiliser le hook `useEffect` pour récupérer des données d'une API.  
+Dans cet exercice vous allez utiliser le hook `useEffect` pour récupérer des données d'une API.  
 L'API que vous allez utiliser renvoie des commentaires. Lors du chargement de cette application, vous allez afficher le commentaire dont l'id 1.  
 Affichez 2 boutons `Précédent` et `Suivant` pour pouvoir afficher les commentaires précédents et suivants de l'API.  
 Dans l'application affichez uniquement les champs `id` et `name` des commentaires.  
@@ -80,7 +80,7 @@ Voici l'adresse de l'API à utiliser (le dernier nombre correspond à l’id)
 
 Affichez un formulaire composé de 2 champs
 - Un nom (ce champ est requis et doit être composé d'au moins 2 caractères).
-- Un numéro de téléphone (ce champs doit être composé de 10 chiffres).
+- Un numéro de téléphone (ce champ est requis et doit être composé de 10 chiffres. Les chiffres peuvent être séparés par des espaces).
 
 Un bouton d'envoi permet d'afficher dans un autre champ les données remplies dans le formulaire.
 
@@ -98,7 +98,7 @@ Vous utiliserez Redux pour gérer l'état de ce composant.
 
 ## Exercice 9
 
-Dans cet exercices vous allez utiliser un middleware Redux pour récupérer des données d'une API.  
+Dans cet exercice vous allez utiliser un middleware Redux pour récupérer des données d'une API.  
 Reprenez exactement le même énoncé que pour l'exercice 6, mais cette fois-ci utilisez un middleware Redux pour envoyer la requête à l'API.
 
 Dans l'application affichez uniquement les champs `id` et `name` des commentaires.  

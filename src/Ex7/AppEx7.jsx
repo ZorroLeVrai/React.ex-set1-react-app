@@ -1,7 +1,12 @@
+import UserForm from './UserForm'
+import UserFormWithZod from './UserFormWithZod'
+
 const AppEx7 = () => {
   return (
-    <div>AppEx7</div>
+    <div className="m-2">
+      <UserFormWithZod />
+    </div>
   )
 }
 
-export default AppEx7;
+export default AppEx7
