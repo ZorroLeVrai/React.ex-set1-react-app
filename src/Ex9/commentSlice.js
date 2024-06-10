@@ -24,5 +24,5 @@ export const commentSlice = createSlice({
 });
 
 // Des action creators sont générées pour chaque reducer function
-export const { updateComment, incrementCommentId, decrementCommentId } = commentSlice.actions;
+export const { updateComment, updateError, incrementCommentId, decrementCommentId } = commentSlice.actions;
 export default commentSlice.reducer;

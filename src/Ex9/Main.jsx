@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { apiRequested } from "./actionCreators";
-import { decrementCommentId, incrementCommentId } from "./commentSlice";
+import { decrementCommentId, incrementCommentId, updateComment } from "./commentSlice";
 import Comment from "./Comment";
 import Error from "./Error";
 
