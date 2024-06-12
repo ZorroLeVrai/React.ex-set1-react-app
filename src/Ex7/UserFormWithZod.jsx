@@ -28,7 +28,7 @@ const UserFormWithZod = () => {
         Prénom
       </label>
       <input
-        {...register("firstName", {required: true, minLength: 2})}
+        {...register("firstName")}
         id="firstName"
         type="text"
         className="form-control"
@@ -41,7 +41,7 @@ const UserFormWithZod = () => {
         Numéro de téléphone
       </label>
       <input
-        {...register("phoneNumber", {required: true, pattern: /^(\d\s?){10}$/})}
+        {...register("phoneNumber")}
         id="phoneNumber"
         type="text"
         className="form-control"
