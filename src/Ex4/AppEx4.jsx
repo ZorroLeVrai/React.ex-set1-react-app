@@ -14,7 +14,7 @@ export default function AppEx4() {
   const onAddHanlder = () =>
     setCartItems([...cartItems, `Item ${nbItems + 1}`]);
   const onRemoveHanlder = () =>
-    setCartItems(cartItems.filter((item, index) => index < nbItems - 1));
+    setCartItems(cartItems.slice(0, -1));
 
   return (
     <DivMediumWidth>
