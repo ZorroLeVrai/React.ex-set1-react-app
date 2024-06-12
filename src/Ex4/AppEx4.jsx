@@ -13,6 +13,7 @@ export default function AppEx4() {
 
   const onAddHanlder = () =>
     setCartItems([...cartItems, `Item ${nbItems + 1}`]);
+
   const onRemoveHanlder = () =>
     setCartItems(cartItems.slice(0, -1));
 
