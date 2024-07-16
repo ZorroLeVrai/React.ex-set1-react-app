@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
+import { CART_ACTION } from '../cartAction';
 
 export default function Cart(props) {
-  const { cardItems, onAddHandler, onRemoveHandler } = props;
+  const { cardItems, dispatch } = props;
 
   return (
     <div className="card">
       <div className="card-body">
         <div>
-          <button onClick={onAddHandler}>Add</button>
-          <button onClick={onRemoveHandler}>Remove</button>
+          <button onClick={() => dispatch({type: CART_ACTION.ADD_ITEM})}>Add</button>
+          <button onClick={() => dispatch({type: CART_ACTION.REMOVE_ITEM})}>Remove</button>
         </div>
         List items:
         <ol>
@@ -23,6 +24,5 @@ export default function Cart(props) {
 
 Cart.propTypes = {
   cardItems: PropTypes.array.isRequired,
-  onAddHandler: PropTypes.func.isRequired,
-  onRemoveHandler: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
 };

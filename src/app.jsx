@@ -5,6 +5,7 @@ import AppEx1 from "./Ex1/AppEx1";
 import AppEx2 from "./Ex2/AppEx2";
 import AppEx3 from "./Ex3/AppEx3";
 import AppEx4 from "./Ex4/AppEx4";
+import AppEx4bis from "./Ex4bis/AppEx4bis";
 import AppEx5 from "./Ex5/AppEx5";
 import AppEx6 from "./Ex6/AppEx6";
 import AppEx7 from "./Ex7/AppEx7";
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/Ex2" element={<AppEx2 />} />
         <Route path="/Ex3" element={<AppEx3 />} />
         <Route path="/Ex4" element={<AppEx4 />} />
+        <Route path="/Ex4bis" element={<AppEx4bis />} />
         <Route path="/Ex5" element={<AppEx5 />} />
         <Route path="/Ex6" element={<AppEx6 />} />
         <Route path="/Ex7" element={<AppEx7 />} />

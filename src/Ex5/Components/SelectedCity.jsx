@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function SelectedCity({ city }) {
   const noCityMsg = "No city selected";
 
@@ -8,3 +10,7 @@ export default function SelectedCity({ city }) {
     </div>
   );
 }
+
+SelectedCity.propTypes = {
+  city: PropTypes.string.isRequired
+};

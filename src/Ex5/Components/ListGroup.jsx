@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ListGroupItem from "./ListGroupItem";
+import PropTypes from 'prop-types';
 
 export default function ListGroup({ items, heading, onSelectItem }) {
   const [lastClickedIndex, setLastClickedIndex] = useState(-1);
@@ -23,3 +24,9 @@ export default function ListGroup({ items, heading, onSelectItem }) {
     </>
   );
 }
+
+ListGroup.propTypes = {
+  items: PropTypes.array.isRequired,
+  heading: PropTypes.string.isRequired,
+  onSelectItem: PropTypes.func.isRequired
+};
