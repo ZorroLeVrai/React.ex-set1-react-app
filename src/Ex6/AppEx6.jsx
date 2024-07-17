@@ -1,16 +1,21 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
+
+async function fetchData(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
 
 export default function AppEx6() {
   const [commentId, setCommentId] = useState(1);
   const [comment, setComment] = useState(null);
 
-  const fetchData = useCallback(async () => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${commentId}`);
-    const commentItem = await response.json();
+  const fetchComment = async (id) => {
+    const commentItem = await fetchData(`https://jsonplaceholder.typicode.com/comments/${id}`);
     setComment(commentItem);
-  }, [commentId]);
+  };
 
-  useEffect(() => {fetchData()}, [fetchData]);
+  useEffect(() => {fetchComment(commentId)}, [commentId]);
 
   const handlePreviousComment = () => setCommentId(id => id-1);
   const handleNextComment = () => setCommentId(id => id+1);
