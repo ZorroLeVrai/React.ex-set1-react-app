@@ -7,7 +7,6 @@ function getLinkObject(id, label) {
 }
 
 export default function Home() {
-  //const exerciseList = [...Array(nbExercises).keys()].map((i) => i + 1);
   const exerciseList = [
     getLinkObject(1),
     getLinkObject(2),
@@ -19,7 +18,8 @@ export default function Home() {
     getLinkObject(7),
     getLinkObject(8),
     getLinkObject(9),
-    getLinkObject(10)
+    getLinkObject(10),
+    getLinkObject(11)
   ];
 
   return (
