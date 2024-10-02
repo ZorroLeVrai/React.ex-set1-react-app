@@ -27,7 +27,7 @@ const UserForm = () => {
       {errors.firstName?.type === "minLength" && <p className="text-danger">Le champ Prénom doit comporter au moins 2 caractères</p>}
     </div>
     <div className="mb-3">
-      <label htmlFor="age" className="form-label">
+      <label htmlFor="phoneNumber" className="form-label">
         Numéro de téléphone
       </label>
       <input

@@ -37,7 +37,7 @@ const UserFormWithZod = () => {
       {errors.firstName && <p className="text-danger">{errors.firstName.message}</p>}
     </div>
     <div className="mb-3">
-      <label htmlFor="age" className="form-label">
+      <label htmlFor="phoneNumber" className="form-label">
         Numéro de téléphone
       </label>
       <input
